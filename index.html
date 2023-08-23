@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Required for favicon -->
+  <link rel="icon" href="./assets/favicon.ico" sizes="any"><!-- 32×32 -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="./assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="manifest" href="./assets/manifest.webmanifest">
+
+
+  <!-- bootstrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- bootstrap icons-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <!-- required by model viewer -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+
+  <!-- required for qrcode-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"
+    integrity="sha512-pUhApVQtLbnpLtJn6DuzDD5o2xtmLJnJ7oBoMsBnzOkVkpqofGLGPaBJ6ayD2zQe3lCgCibhJBi4cj5wAxwVKA=="
+    crossorigin="anonymous"></script>
+
+</head>
+
+
+<body class="text-center bg-white">
+  <!-- whole web container inside body-->
+  <div class="container w-100">
+
+    <!-- menu header section -->
+    <nav class="navbar navbar-expand-md pt-2" style="margin-bottom: 30px;">
+      <a href="" class="navbar-brand">
+        <h5 class="text-dark d-inline-block px-2">Escritório de Dados</h5>
+      </a>
+      <!--collapsed button  -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <!--menu elements  -->
+      <div class="collapse navbar-collapse small justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link nav-item text-black-50" href="#how_to">Como usar?</a></li>
+          <li class="nav-item"><a class="nav-link nav-item text-black-50" href="https://prefeitura.rio/">Prefeitura.rio</a></li>
+          <li class="nav-item"><a class="nav-link nav-item text-black-50" href="https://www.dados.rio/">Dados.rio</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 3d model section -->
+    <div class="shadow bg-light">
+
+      <div class="row px-3 py-2 align-items-center">
+
+        <h5 class="text-start"><i class="bi bi-phone pe-2"></i>Terminal Gentileza</h5>
+        <!-- left column -->
+        <div class="col">
+          <p class="text-center">Dizeres sobre a obra ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam id dolor eum explicabo quasi iusto repellendus voluptatem.</p>
+        </div>
+
+        <!-- right column   -->
+        <div class="col">
+
+          <model-viewer
+            style="width: 300px; height: 300px; margin:0 auto; background-color: #ffffff00; outline: none;border: none"
+            src="./assets/Heart.glb" ios-src="./assets/Heart.usdz" alt="your 3d model" auto-rotate ar
+            ar-modes="scene-viewer webxr quick-look" camera-orbit="90deg 90deg 0.5m" min-camera-orbit="auto auto auto"
+            max-camera-orbit="auto auto 0.5m" camera-controls>
+            <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px; right: 16px; ">
+              👋 Ativar Realidade Aumentada
+            </button>
+          </model-viewer>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="shadow bg-light">
+
+      <div class="row px-3 py-2 align-items-center">
+
+        <h5 class="text-start"><i class="bi bi-phone pe-2"></i>Cristo Redentor</h5>
+        <!-- left column -->
+        <div class="col">
+
+
+          <p class="text-center">Dizeres sobre o cristo ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam id dolor eum explicabo quasi iusto repellendus voluptatem.</p>
+        </div>
+
+        <!-- right column   -->
+        <div class="col">
+
+          <model-viewer
+            style="width: 300px; height: 300px; margin:0 auto; background-color: #ffffff00; outline: none;border: none"
+            src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+            ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz" alt="your 3d model" auto-rotate ar
+            ar-modes="scene-viewer webxr quick-look" camera-orbit="90deg 90deg 0.5m" min-camera-orbit="auto auto auto"
+            max-camera-orbit="auto auto 0.5m" camera-controls>
+            <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px; right: 16px; ">
+              👋 Ativar Realidade Aumentada
+            </button>
+          </model-viewer>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- how to use section -->
+    <div id="how_to" class="shadow bg-light mt-4 pb-3 px-3">
+      <h5 class="text-start py-2 "><i class="bi bi-info-circle pe-2"></i>Como usar?</h5>
+      <canvas id="qr" class="mb-3"></canvas>
+
+      <script>
+        (function () {
+          //remove anchor parameters from url
+          var str = window.location.href;
+          var index = str.lastIndexOf("/");
+          var url = str.substr(0, index);
+          var qr = new QRious({
+            element: document.getElementById('qr'),
+            size: 256,
+            value: url
+          });
+        })();
+      </script>
+
+      <div class="card-group">
+        <div class="card bg-transparent border-0">
+          <i class="bi bi-upc-scan" style="font-size: 3rem;"></i>
+          <div class="card-body ">
+            <p class="card-text text-start">1. Escaneie este código QR ou escreva manualmente o URL real em seu navegador móvel.</p>
+          </div>
+        </div>
+        <div class="card bg-transparent border-0">
+          <img src="./assets/ic_modelviewer.svg" alt="ar icon" class="pt-2 mx-auto d-block img-fluid card-img-top"
+            style="width:64px">
+          <div class="card-body ">
+            <p class="card-text text-start">2. Clique no ícone sobre o modelo 3d para trazer o objeto para o seu espaço.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="card bg-transparent border-0">
+          <img src="./assets/hand.png" alt="ar icon" class="pt-1 mx-auto d-block img-fluid card-img-top"
+            style="width:62px">
+          <div class="card-body ">
+            <p class="card-text text-start">3. Grave um vídeo ou tire fotos de suas experiências para compartilhar com outras pessoas.</p>
+          </div>
+        </div>
+
+        <div class="card bg-transparent border-0">
+          <img src="./assets/mobileshare.svg" alt="mobile share" class="pt-2 mx-auto d-block img-fluid card-img-top"
+            style="width:62px">
+          <div class="card-body ">
+            <p class="card-text text-start">4.Grave um vídeo ou tire fotos de suas experiências para compartilhar com outras pessoas.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+     </div>
+
+  <!-- bootstrap requirement-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

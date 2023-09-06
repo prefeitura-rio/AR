@@ -32,8 +32,9 @@
 
 </head>
 
+<body style="margin: 0; display: flex; justify-content: center; align-items: center; ">
+  <div style="max-width: 1200px !important; ">
 
-<body class="text-center bg-white">
   <!-- whole web container inside body-->
   <div class="container w-100">
 
@@ -51,8 +52,10 @@
       <div class="collapse navbar-collapse small justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link nav-item text-black-50" href="#how_to">Como usar?</a></li>
-          <li class="nav-item"><a class="nav-link nav-item text-black-50" href="https://prefeitura.rio/">Prefeitura.rio</a></li>
-          <li class="nav-item"><a class="nav-link nav-item text-black-50" href="https://www.dados.rio/">Dados.rio</a></li>
+          <li class="nav-item"><a class="nav-link nav-item text-black-50"
+              href="https://prefeitura.rio/">Prefeitura.rio</a></li>
+          <li class="nav-item"><a class="nav-link nav-item text-black-50" href="https://www.dados.rio/">Dados.rio</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -62,21 +65,18 @@
 
       <div class="row px-3 py-2 align-items-center">
 
-        <h5 class="text-start"><i class="bi bi-phone pe-2"></i>Terminal Gentileza</h5>
-        <!-- left column -->
-        <div class="col">
-          <p class="text-center">Dizeres sobre a obra ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam id dolor eum explicabo quasi iusto repellendus voluptatem.</p>
-        </div>
+        <h5 class="text-start"><i class="bi bi-phone pe-2"></i>Super Centro Carioca de Saúde</h5>
 
         <!-- right column   -->
         <div class="col">
 
           <model-viewer
             style="width: 300px; height: 300px; margin:0 auto; background-color: #ffffff00; outline: none;border: none"
-            src="./assets/Heart.glb" ios-src="./assets/Heart.usdz" alt="your 3d model" auto-rotate ar
+            src="./assets/super-centro.glb" alt="your 3d model" auto-rotate ar
             ar-modes="scene-viewer webxr quick-look" camera-orbit="90deg 90deg 0.5m" min-camera-orbit="auto auto auto"
             max-camera-orbit="auto auto 0.5m" camera-controls>
-            <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px; right: 16px; ">
+            <button slot="ar-button"
+              style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px; right: 16px; ">
               👋 Ativar Realidade Aumentada
             </button>
           </model-viewer>
@@ -90,23 +90,25 @@
 
       <div class="row px-3 py-2 align-items-center">
 
-        <h5 class="text-start"><i class="bi bi-phone pe-2"></i>Cristo Redentor</h5>
+        <h5 class="text-start"><i class="bi bi-phone pe-2"></i>BRT</h5>
         <!-- left column -->
-        <div class="col">
+        <!-- <div class="col">
 
 
-          <p class="text-center">Dizeres sobre o cristo ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam id dolor eum explicabo quasi iusto repellendus voluptatem.</p>
-        </div>
+          <p class="text-center">Dizeres sobre o BRT ... Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Quam id dolor eum explicabo quasi iusto repellendus voluptatem.</p>
+        </div> -->
 
         <!-- right column   -->
         <div class="col">
 
           <model-viewer
             style="width: 300px; height: 300px; margin:0 auto; background-color: #ffffff00; outline: none;border: none"
-            src="./assets/cristo.gltf" alt="your 3d model" auto-rotate ar
-            ar-modes="scene-viewer webxr quick-look" camera-orbit="90deg 90deg 0.5m" min-camera-orbit="auto auto auto"
-            max-camera-orbit="auto auto 0.5m" camera-controls>
-            <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px; right: 16px; ">
+            src="./assets/brt.glb" alt="your 3d model" auto-rotate ar ar-modes="scene-viewer webxr quick-look"
+            camera-orbit="90deg 90deg 0.5m" min-camera-orbit="auto auto auto" max-camera-orbit="auto auto 0.5m"
+            camera-controls>
+            <button slot="ar-button"
+              style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px; right: 16px; ">
               👋 Ativar Realidade Aumentada
             </button>
           </model-viewer>
@@ -120,13 +122,14 @@
 
       <div class="row px-3 py-2 align-items-center">
 
-        <h5 class="text-start"><i class="bi bi-phone pe-2"></i>Astronauta</h5>
+        <h5 class="text-start"><i class="bi bi-phone pe-2"></i>Estação de BRT</h5>
         <!-- left column -->
-        <div class="col">
+        <!-- <div class="col">
 
 
-          <p class="text-center">Dizeres sobre o astronauta ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam id dolor eum explicabo quasi iusto repellendus voluptatem.</p>
-        </div>
+          <p class="text-center">Dizeres sobre a estação de BRT ... Lorem ipsum dolor, sit amet consectetur adipisicing
+            elit. Quam id dolor eum explicabo quasi iusto repellendus voluptatem.</p>
+        </div> -->
 
         <!-- right column   -->
         <div class="col">
@@ -137,7 +140,8 @@
             ios-src="https://modelviewer.dev/shared-assets/models/Astronaut.usdz" alt="your 3d model" auto-rotate ar
             ar-modes="scene-viewer webxr quick-look" camera-orbit="90deg 90deg 0.5m" min-camera-orbit="auto auto auto"
             max-camera-orbit="auto auto 0.5m" camera-controls>
-            <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px; right: 16px; ">
+            <button slot="ar-button"
+              style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px; right: 16px; ">
               👋 Ativar Realidade Aumentada
             </button>
           </model-viewer>
@@ -171,7 +175,8 @@
         <div class="card bg-transparent border-0">
           <i class="bi bi-upc-scan" style="font-size: 3rem;"></i>
           <div class="card-body ">
-            <p class="card-text text-start">1. Escaneie este código QR ou escreva manualmente o URL real em seu navegador móvel.</p>
+            <p class="card-text text-start">1. Escaneie este código QR ou escreva manualmente o URL real em seu
+              navegador móvel.</p>
           </div>
         </div>
         <div class="card bg-transparent border-0">
@@ -188,7 +193,8 @@
           <img src="./assets/hand.png" alt="ar icon" class="pt-1 mx-auto d-block img-fluid card-img-top"
             style="width:62px">
           <div class="card-body ">
-            <p class="card-text text-start">3. Grave um vídeo ou tire fotos de suas experiências para compartilhar com outras pessoas.</p>
+            <p class="card-text text-start">3. Grave um vídeo ou tire fotos de suas experiências para compartilhar com
+              outras pessoas.</p>
           </div>
         </div>
 
@@ -196,15 +202,16 @@
           <img src="./assets/mobileshare.svg" alt="mobile share" class="pt-2 mx-auto d-block img-fluid card-img-top"
             style="width:62px">
           <div class="card-body ">
-            <p class="card-text text-start">4.Grave um vídeo ou tire fotos de suas experiências para compartilhar com outras pessoas.</p>
+            <p class="card-text text-start">4.Grave um vídeo ou tire fotos de suas experiências para compartilhar com
+              outras pessoas.</p>
           </div>
         </div>
       </div>
 
     </div>
 
-     </div>
-
+  </div>
+  </div>
   <!-- bootstrap requirement-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

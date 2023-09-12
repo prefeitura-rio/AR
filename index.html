@@ -102,32 +102,16 @@
           <!-- right column   -->
           <div class="col">
 
-            <model-viewer id="transform" orientation="20deg 0 0" shadow-intensity="1" touch-action="pan-y"
+            <model-viewer
               style="width: 300px; height: 300px; margin:0 auto; background-color: #ffffff00; outline: none;border: none"
               src="./assets/cristo.glb" alt="your 3d model" auto-rotate ar ar-modes="scene-viewer webxr quick-look"
               camera-orbit="90deg 90deg 0.5m" min-camera-orbit="auto auto auto" max-camera-orbit="auto auto 0.5m"
-              camera-controls class="meu-modelo-3d">
+              camera-controls scale="0.05 0.05 0.05">
               <button slot="ar-button"
                 style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px; right: 16px; ">
                 👋 Ativar Realidade Aumentada
               </button>
-              
-              <div class="controls">
-                <div>Roll: <input id="roll" value="20" size="3" class="number"> degrees</div>
-                <div>Pitch: <input id="pitch" value="0" size="3" class="number"> degrees</div>
-                <div>Yaw: <input id="yaw" value="0" size="3" class="number"> degrees</div>
-                <div>
-                  Scale: X: <input id="x" value="1" size="3" class="number">,
-                  Y: <input id="y" value="1" size="3" class="number">,
-                  Z: <input id="z" value="1" size="3" class="number">
-                </div>
-                <button id="frame">Update Framing</button>
-              </div>
-              
-
             </model-viewer>
-
-            
 
           </div>
 
@@ -251,47 +235,6 @@
 
     </div>
   </div>
-  <script>
-    const modelViewerTransform = document.querySelector("model-viewer#transform");
-    const roll = document.querySelector('#roll');
-    const pitch = document.querySelector('#pitch');
-    const yaw = document.querySelector('#yaw');
-    const x = document.querySelector('#x');
-    const y = document.querySelector('#y');
-    const z = document.querySelector('#z');
-    const frame = document.querySelector('#frame');
-    
-    frame.addEventListener('click', () => {
-      modelViewerTransform.updateFraming();
-    });
-    
-    const updateOrientation = () => {
-      modelViewerTransform.orientation = `${roll.value}deg ${pitch.value}deg ${yaw.value}deg`;
-    };
-    
-    const updateScale = () => {
-      modelViewerTransform.scale = `${x.value} ${y.value} ${z.value}`;
-    };
-    
-    roll.addEventListener('input', () => {
-      updateOrientation();
-    });
-    pitch.addEventListener('input', () => {
-      updateOrientation();
-    });
-    yaw.addEventListener('input', () => {
-      updateOrientation();
-    });
-    x.addEventListener('input', () => {
-      updateScale();
-    });
-    y.addEventListener('input', () => {
-      updateScale();
-    });
-    z.addEventListener('input', () => {
-      updateScale();
-    });
-    </script>
   <!-- bootstrap requirement-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

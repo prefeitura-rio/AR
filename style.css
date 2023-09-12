@@ -13,3 +13,6 @@
     border-radius: 0;
     background: #2A395F;
   }
+  .meu-modelo-3d {
+    transform: scale(0.1); /* Reduz o modelo para 50% do tamanho original */
+}

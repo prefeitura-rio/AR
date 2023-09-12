@@ -66,14 +66,7 @@
         <div class="row px-3 py-2 align-items-center">
 
           <h5 class="text-start"><i class="bi bi-phone pe-2"></i>BRT</h5>
-          <!-- left column -->
-          <!-- <div class="col">
-
-
-          <p class="text-center">Dizeres sobre o BRT ... Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Quam id dolor eum explicabo quasi iusto repellendus voluptatem.</p>
-        </div> -->
-
+        
           <!-- right column   -->
           <div class="col">
 
@@ -110,15 +103,17 @@
           <div class="col">
 
             <model-viewer
-              style="width: 300px; height: 300px; margin:0 auto; background-color: #ffffff00; outline: none;border: none"
-              src="./assets/cristo.glb" alt="your 3d model" auto-rotate ar ar-modes="scene-viewer webxr quick-look"
-              camera-orbit="90deg 90deg 0.5m" min-camera-orbit="auto auto auto" max-camera-orbit="auto auto 0.5m"
-              camera-controls>
-              <button slot="ar-button"
+            style="width: 300px; height: 300px; margin: 0 auto; background-color: #ffffff00; outline: none; border: none"
+            src="./assets/cristo.glb" alt="your 3d model" auto-rotate ar ar-modes="scene-viewer webxr quick-look"
+            camera-orbit="90deg 90deg 0.5m" min-camera-orbit="auto auto auto" max-camera-orbit="auto auto 0.5m"
+            camera-controls
+            scale="0.5 0.5 0.5"> <!-- Defina o fator de escala aqui -->
+            <button slot="ar-button"
                 style="background-color: white; border-radius: 4px; border: none; position: absolute; bottom: 16px; right: 16px; ">
                 👋 Ativar Realidade Aumentada
-              </button>
-            </model-viewer>
+            </button>
+        </model-viewer>
+        
 
           </div>
 
